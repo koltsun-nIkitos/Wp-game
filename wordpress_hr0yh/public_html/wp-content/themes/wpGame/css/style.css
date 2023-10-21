@@ -151,8 +151,8 @@ body {
   width: 100%;
 }
 
-.nav-wrap ul li:hover {
-  background: rgba(104, 131, 201, 0.1);
+.nav-wrap ul li.menu-item:hover {
+  background-color: rgba(104, 131, 201, 0.1);
 }
 
 .nav-wrap ul li:hover a {
@@ -175,19 +175,40 @@ body {
           align-items: center;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+  opacity: 0;
 }
 
-li.current {
+.nav-wrap ul li.home-icon{
+  background: url('../img/icons/home-run.svg') no-repeat center / 25px;
+}
+
+.nav-wrap ul li.game-icon{
+  background: url('../img/icons/fun.svg') no-repeat center / 25px;
+}
+
+.nav-wrap ul li.music-icon{
+  background: url('../img/icons/audio.svg') no-repeat center / 25px;
+}
+
+.nav-wrap ul li.film-icon{
+  background: url('../img/icons/clapperboard.svg') no-repeat center / 25px;
+}
+
+.nav-wrap ul li.setting-icon{
+  background: url('../img/icons/settings.svg') no-repeat center / 25px;
+}
+
+li.current_page_item {
   position: relative;
-  background: rgba(104, 131, 201, 0.1);
+  background-color: rgba(104, 131, 201, 0.1);
 }
 
-li.current::before {
+li.current_page_item::before {
   position: absolute;
   content: '';
   width: 5px;
   height: 100%;
-  background: #6883C9;
+  background-color: #6883C9;
 }
 
 li.current a {
@@ -331,8 +352,24 @@ li.current a {
 }
 
 .game-photo img {
-  height: 100%;
+  width: 182px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 5px;
 }
+
+
+.game-card__main .game-photo img{
+  height: 100%;
+  width: 100%;
+}
+
+.game-card__main .game-photo img.wp-post-image{
+  height: 100%;
+  max-width: 100%;
+  object-fit: scale-down;
+}
+
 
 .game-info {
   max-width: 396px;

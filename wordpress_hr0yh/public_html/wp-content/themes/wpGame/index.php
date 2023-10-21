@@ -14,7 +14,7 @@
 				while ( $query->have_posts() ) {
 					$query->the_post();
 					?>
-						<div class="game-card game-card__order">
+						<div class="game-card game-card__order game-card__main">
 							<div class="game-photo">
 								<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 							</div>
@@ -53,7 +53,7 @@
 				while ( $query->have_posts() ) {
 					$query->the_post();
 					?>
-					<a href="#" class="game-card game-card__small">
+					<a href="<?php echo get_the_permalink();  ?>" class="game-card game-card__small">
 						<div class="game-photo">
 							<img src="<?php echo  get_the_post_thumbnail_url(); ?>" alt="">
 						</div>

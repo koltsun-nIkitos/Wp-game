@@ -29,7 +29,23 @@
 		</div>
 	</header>
 
-	<nav class="nav-wrap">
+	<?php 
+		wp_nav_menu( [
+			'theme_location'  => 'primary',
+			'container'       => 'nav',
+			'container_class' => 'nav-wrap',
+			'menu_class'      => '',
+			'echo'            => true,
+			'fallback_cb'     => 'wp_page_menu',
+			'link_before'     => '',
+			'link_after'      => '',
+			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+			'depth'           => 0,
+			'walker'          => '',
+		] );
+	?>
+
+	<!-- <nav class="nav-wrap">
 		<ul>
 			<li class="current">
 				<a href="#">
@@ -57,4 +73,4 @@
 				</a>
 			</li>
 		</ul>
-	</nav>
+	</nav> -->
